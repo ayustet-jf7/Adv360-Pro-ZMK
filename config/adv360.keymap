@@ -35,6 +35,20 @@
             bindings = <&kp N &kp N>;
             label = "MACRO_NN";
         };
+
+        macro_ime_on: macro_ime_on {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F18 &to 4>;
+            label = "MACRO_IME_ON";
+        };
+
+        macro_ime_off: macro_ime_off {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F17 &to 0>;
+            label = "MACRO_IME_OFF";
+        };
     };
 
     keymap {
@@ -43,11 +57,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp ESC           &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                                      &mo 3    &kp N6  &kp N7  &kp N8     &kp N9      &kp N0         &kp MINUS
-&kp TAB           &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                                       &to 4    &kp Y   &kp U   &kp I      &kp O       &kp P          &kp APOS
-&kp LEFT_CONTROL  &kp A      &kp S     &kp D     &kp F      &kp G   &kp F17  &kp EQUAL  &kp LALT           &kp LGUI       &kp NON_US_BACKSLASH  &kp F18  &kp H   &kp J   &kp K      &kp L       &kp SEMICOLON  &kp RIGHT_CONTROL
-&kp LSHFT         &kp Z      &kp X     &kp C     &kp V      &kp B                       &kp DELETE         &kp DELETE                                    &kp N   &kp M   &kp COMMA  &kp PERIOD  &kp SLASH      &kp RSHFT
-&mo 2             &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &mo 1    &kp SPACE  &kp BACKSPACE      &kp BACKSPACE  &kp ENTER             &mo 1            &kp UP  &kp DOWN   &kp LBKT    &kp RBKT       &mo 2
+&kp ESC           &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                                      &mo 3          &kp N6  &kp N7  &kp N8     &kp N9      &kp N0         &kp MINUS
+&kp TAB           &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                                       &to 4          &kp Y   &kp U   &kp I      &kp O       &kp P          &kp APOS
+&kp LEFT_CONTROL  &kp A      &kp S     &kp D     &kp F      &kp G   &kp F17  &kp EQUAL  &kp LALT           &kp LGUI       &kp NON_US_BACKSLASH  &macro_ime_on  &kp H   &kp J   &kp K      &kp L       &kp SEMICOLON  &kp RIGHT_CONTROL
+&kp LSHFT         &kp Z      &kp X     &kp C     &kp V      &kp B                       &kp DELETE         &kp DELETE                                          &kp N   &kp M   &kp COMMA  &kp PERIOD  &kp SLASH      &kp RSHFT
+&mo 2             &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &mo 1    &kp SPACE  &kp BACKSPACE      &kp BACKSPACE  &kp ENTER             &mo 1                  &kp UP  &kp DOWN   &kp LBKT    &kp RBKT       &mo 2
             >;
         };
 
@@ -87,11 +101,11 @@
         Japanese {
             display-name = "Red";
             bindings = <
-&kp ESC           &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                                      &mo 3    &kp N6             &kp N7      &kp N8     &kp N9      &kp N0     &kp MINUS
-&kp TAB           &kp P      &kp R     &kp N     &kp M      &kp F   &to 0                                                                       &none    &kp LEFT_BRACKET   &macro_ltu  &kp I      &kp E       &kp L      &kp APOS
-&kp LEFT_CONTROL  &kp H      &kp T     &kp S     &kp K      &kp W   &kp F17  &kp EQUAL  &kp LALT           &kp LGUI       &kp NON_US_BACKSLASH  &kp F18  &kp MINUS          &kp A       &kp U      &kp O       &kp Y      &kp RIGHT_CONTROL
-&kp LSHFT         &kp B      &kp D     &kp Z     &kp G      &kp V                       &kp DELETE         &kp DELETE                                    &kp RIGHT_BRACKET  &macro_nn   &kp COMMA  &kp PERIOD  &kp SLASH  &kp RSHFT
-&mo 2             &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &mo 1    &kp SPACE  &kp BACKSPACE      &kp BACKSPACE  &kp ENTER             &mo 1                       &kp UP      &kp DOWN   &kp LBKT    &kp RBKT   &mo 2
+&kp ESC           &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                                             &mo 3    &kp N6     &kp N7      &kp N8     &kp N9      &kp N0     &kp MINUS
+&kp TAB           &kp P      &kp R     &kp N     &kp M      &kp F   &to 0                                                                              &none    &none      &macro_ltu  &kp I      &kp E       &kp L      &kp APOS
+&kp LEFT_CONTROL  &kp H      &kp T     &kp S     &kp K      &kp W   &macro_ime_off  &kp EQUAL  &kp LALT           &kp LGUI       &kp NON_US_BACKSLASH  &kp F18  &kp MINUS  &kp A       &kp U      &kp O       &kp Y      &kp RIGHT_CONTROL
+&kp LSHFT         &kp B      &kp D     &kp Z     &kp G      &kp V                              &kp DELETE         &kp DELETE                                    &none      &macro_nn   &kp COMMA  &kp PERIOD  &kp SLASH  &kp RSHFT
+&mo 6             &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &mo 1           &kp SPACE  &kp BACKSPACE      &kp BACKSPACE  &kp ENTER             &mo 1               &kp UP      &kp DOWN   &kp LBKT    &kp RBKT   &mo 6
             >;
         };
 
@@ -107,7 +121,7 @@
         };
 
         Fn_JP {
-            display-name = "Cyan";  
+            display-name = "Cyan";
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 1                                      &mo 3   &kp F7  &kp F8  &kp F18  &kp F10  &kp F11  &kp F12
 &trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans  &trans  &trans   &trans   &trans   &trans
