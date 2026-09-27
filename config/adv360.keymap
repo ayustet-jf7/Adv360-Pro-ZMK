@@ -28,7 +28,7 @@
             display-name = "Base";
             bindings = <
 &kp ESC           &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                                      &mo 3    &kp N6  &kp N7  &kp N8     &kp N9      &kp N0         &kp MINUS
-&kp TAB           &kp Q      &kp W     &kp E     &kp R      &kp T   &kp F22                                                                     &kp F23  &kp Y   &kp U   &kp I      &kp O       &kp P          &kp APOS
+&kp TAB           &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                                       &to 4    &kp Y   &kp U   &kp I      &kp O       &kp P          &kp APOS
 &kp LEFT_CONTROL  &kp A      &kp S     &kp D     &kp F      &kp G   &kp F17  &kp EQUAL  &kp LALT           &kp LGUI       &kp NON_US_BACKSLASH  &kp F18  &kp H   &kp J   &kp K      &kp L       &kp SEMICOLON  &kp RIGHT_CONTROL
 &kp LSHFT         &kp Z      &kp X     &kp C     &kp V      &kp B                       &kp DELETE         &kp DELETE                                    &kp N   &kp M   &kp COMMA  &kp PERIOD  &kp SLASH      &kp RSHFT
 &mo 2             &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &mo 1    &kp SPACE  &kp BACKSPACE      &kp BACKSPACE  &kp ENTER             &mo 1            &kp UP  &kp DOWN   &kp LBKT    &kp RBKT       &mo 2
@@ -68,14 +68,14 @@
             >;
         };
 
-        extra1 {
+        Japanese {
             display-name = "Red";
             bindings = <
-&kp ESC           &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                                      &mo 3    &kp N6  &kp N7  &kp N8     &kp N9      &kp N0         &kp MINUS
-&kp TAB           &kp Q      &kp W     &kp E     &kp R      &kp T   &kp F22                                                                     &kp F23  &kp Y   &kp U   &kp I      &kp O       &kp P          &kp APOS
-&kp LEFT_CONTROL  &kp A      &kp S     &kp D     &kp F      &kp G   &kp F17  &kp EQUAL  &kp LALT           &kp LGUI       &kp NON_US_BACKSLASH  &kp F18  &kp H   &kp J   &kp K      &kp L       &kp SEMICOLON  &kp RIGHT_CONTROL
-&kp LSHFT         &kp Z      &kp X     &kp C     &kp V      &kp B                       &kp DELETE         &kp DELETE                                    &kp N   &kp M   &kp COMMA  &kp PERIOD  &kp SLASH      &kp RSHFT
-&mo 2             &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &mo 1    &kp SPACE  &kp BACKSPACE      &kp BACKSPACE  &kp ENTER             &mo 1            &kp UP  &kp DOWN   &kp LBKT    &kp RBKT       &mo 2
+&kp ESC           &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                                      &mo 3    &kp N6     &kp N7  &kp N8     &kp N9      &kp N0     &kp MINUS
+&kp TAB           &kp P      &kp R     &kp N     &kp M      &kp F   &to 0                                                                       &none    &none      &kp U   &kp I      &kp E       &kp L      &kp APOS
+&kp LEFT_CONTROL  &kp H      &kp T     &kp S     &kp K      &kp W   &kp F17  &kp EQUAL  &kp LALT           &kp LGUI       &kp NON_US_BACKSLASH  &kp F18  &kp MINUS  &kp A   &kp U      &kp O       &kp Y      &kp RIGHT_CONTROL
+&kp LSHFT         &kp B      &kp D     &kp Z     &kp G      &kp V                       &kp DELETE         &kp DELETE                                    &none      &kp M   &kp COMMA  &kp PERIOD  &kp SLASH  &kp RSHFT
+&mo 2             &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &mo 1    &kp SPACE  &kp BACKSPACE      &kp BACKSPACE  &kp ENTER             &mo 1               &kp UP  &kp DOWN   &kp LBKT    &kp RBKT   &mo 2
             >;
         };
 
