@@ -20,6 +20,13 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+ja_n2: ja_number_2 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N2>, <&kp LBKT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -58,7 +65,7 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp ESC           &kp N1            &kp JA_N2        &kp N3      &kp N4     &kp N5  &tog 1                                                                      &mo 3          &kp N6  &kp N7  &kp N8    &kp N9    &kp N0    &kp MINUS
+&kp ESC           &kp N1            &ja_n2        &kp N3      &kp N4     &kp N5  &tog 1                                                                      &mo 3          &kp N6  &kp N7  &kp N8    &kp N9    &kp N0    &kp MINUS
 &kp TAB           &kp SINGLE_QUOTE  &kp COMMA     &kp PERIOD  &kp P      &kp Y   &none                                                                       &to 4          &kp F   &kp G   &kp C     &kp R     &kp L     &kp SLASH
 &kp LEFT_CONTROL  &kp A             &kp O         &kp E       &kp U      &kp I   &kp F17  &kp EQUAL  &kp LALT           &kp LGUI       &kp NON_US_BACKSLASH  &macro_ime_on  &kp D   &kp H   &kp T     &kp N     &kp S     &kp RIGHT_CONTROL
 &kp LSHFT         &kp SEMICOLON     &kp Q         &kp J       &kp K      &kp X                       &kp DELETE         &kp DELETE                                          &kp B   &kp M   &kp W     &kp V     &kp Z     &kp RSHFT
