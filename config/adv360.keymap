@@ -57,6 +57,20 @@
             bindings = <&kp INTERNATIONAL_5 &kp F17 &to 0>;
             label = "MACRO_IME_OFF";
         };
+
+        macro_LeftSquareBracket: macro_LeftSquareBracket {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT>;
+            label = "MACRO_LEFTSQUAREBRACKET";
+        };
+
+        macro_RightSquareBrackt: macro_RightSquareBrackt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RBKT>;
+            label = "MACRO_RIGHTSQUAREBRACKT";
+        };
     };
 
     keymap {
@@ -76,11 +90,11 @@
         keypad {
             display-name = "Kp";
             bindings = <
-&kp ESCAPE        &none      &none           &none              &none            &none          &trans                                                     &mo 3   &none              &none              &none            &none            &none    &none
-&kp TAB           &none      &kp PAGE_UP     &kp UP             &kp PAGE_DOWN    &none          &none                                                      &none   &none              &kp PAGE_UP        &kp UP_ARROW     &kp PAGE_DOWN    &none    &none
-&kp LEFT_CONTROL  &kp HOME   &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &kp END        &none   &none    &kp LALT           &kp LGUI    &none      &none   &kp HOME           &kp LEFT_ARROW     &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp END  &kp RIGHT_CONTROL
-&kp LSHFT         &kp LC(Z)  &kp LC(X)       &kp LC(C)          &kp LC(V)        &kp LA(SPACE)                   &none              &none                          &kp K_APPLICATION  &kp LC(KP_PLUS)    &kp F17          &kp F18          &none    &kp RSHFT
-&mo 2             &none      &none           &kp C_VOLUME_DOWN  &kp C_VOLUME_UP                 &trans  &kp DEL  &kp BACKSPACE      &kp DELETE  &kp ENTER  &trans                     &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp F22          &kp F23  &mo 2
+&kp ESCAPE        &none      &none           &none              &none            &none          &trans                                                     &mo 3   &none              &macro_LeftSquareBracket  &macro_RightSquareBrackt  &none            &none    &none
+&kp TAB           &none      &kp PAGE_UP     &kp UP             &kp PAGE_DOWN    &none          &none                                                      &none   &none              &kp PAGE_UP               &kp UP_ARROW              &kp PAGE_DOWN    &none    &none
+&kp LEFT_CONTROL  &kp HOME   &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &kp END        &none   &none    &kp LALT           &kp LGUI    &none      &none   &kp HOME           &kp LEFT_ARROW            &kp DOWN_ARROW            &kp RIGHT_ARROW  &kp END  &kp RIGHT_CONTROL
+&kp LSHFT         &kp LC(Z)  &kp LC(X)       &kp LC(C)          &kp LC(V)        &kp LA(SPACE)                   &none              &none                          &kp K_APPLICATION  &kp LC(KP_PLUS)           &kp F17                   &kp F18          &none    &kp RSHFT
+&mo 2             &none      &none           &kp C_VOLUME_DOWN  &kp C_VOLUME_UP                 &trans  &kp DEL  &kp BACKSPACE      &kp DELETE  &kp ENTER  &trans                     &kp C_VOLUME_DOWN         &kp C_VOLUME_UP           &kp F22          &kp F23  &mo 2
             >;
         };
 
@@ -120,11 +134,11 @@
         keypad_JP {
             display-name = "Purple";
             bindings = <
-&kp ESCAPE        &none      &none           &none              &none            &none          &trans                                                     &mo 3   &none              &none              &none            &none            &none    &none
-&kp TAB           &none      &kp PAGE_UP     &kp UP             &kp PAGE_DOWN    &none          &none                                                      &none   &none              &kp PAGE_UP        &kp UP_ARROW     &kp PAGE_DOWN    &none    &none
-&kp LEFT_CONTROL  &kp HOME   &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &kp END        &none   &none    &kp LALT           &kp LGUI    &none      &none   &kp HOME           &kp LEFT_ARROW     &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp END  &kp RIGHT_CONTROL
-&kp LSHFT         &kp LC(Z)  &kp LC(X)       &kp LC(C)          &kp LC(V)        &kp LA(SPACE)                   &none              &none                          &kp K_APPLICATION  &kp LC(KP_PLUS)    &kp F17          &kp F18          &none    &kp RSHFT
-&mo 2             &none      &none           &kp C_VOLUME_DOWN  &kp C_VOLUME_UP                 &trans  &kp DEL  &kp BACKSPACE      &kp DELETE  &kp ENTER  &trans                     &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp F22          &kp F23  &mo 2
+&kp ESCAPE        &none      &none           &none              &none            &none          &trans                                                     &mo 3   &none              &macro_LeftSquareBracket  &macro_RightSquareBrackt  &none            &none    &none
+&kp TAB           &none      &kp PAGE_UP     &kp UP             &kp PAGE_DOWN    &none          &none                                                      &none   &none              &kp PAGE_UP               &kp UP_ARROW              &kp PAGE_DOWN    &none    &none
+&kp LEFT_CONTROL  &kp HOME   &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &kp END        &none   &none    &kp LALT           &kp LGUI    &none      &none   &kp HOME           &kp LEFT_ARROW            &kp DOWN_ARROW            &kp RIGHT_ARROW  &kp END  &kp RIGHT_CONTROL
+&kp LSHFT         &kp LC(Z)  &kp LC(X)       &kp LC(C)          &kp LC(V)        &kp LA(SPACE)                   &none              &none                          &kp K_APPLICATION  &kp LC(KP_PLUS)           &kp F17                   &kp F18          &none    &kp RSHFT
+&mo 2             &none      &none           &kp C_VOLUME_DOWN  &kp C_VOLUME_UP                 &trans  &kp DEL  &kp BACKSPACE      &kp DELETE  &kp ENTER  &trans                     &kp C_VOLUME_DOWN         &kp C_VOLUME_UP           &kp F22          &kp F23  &mo 2
             >;
         };
 
