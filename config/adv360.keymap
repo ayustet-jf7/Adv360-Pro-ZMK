@@ -20,10 +20,11 @@
             bindings = <&kp>, <&kp>;
         };
 
-ja_n2: ja_number_2 {
+        ja_n2: ja_number_2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N2>, <&kp LBKT>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -46,14 +47,14 @@ ja_n2: ja_number_2 {
         macro_ime_on: macro_ime_on {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp INTERNATIONAL_4 &to 4>;
+            bindings = <&kp INTERNATIONAL_4 &kp F18 &to 4>;
             label = "MACRO_IME_ON";
         };
 
         macro_ime_off: macro_ime_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp INTERNATIONAL_5 &to 0>;
+            bindings = <&kp INTERNATIONAL_5 &kp F17 &to 0>;
             label = "MACRO_IME_OFF";
         };
     };
