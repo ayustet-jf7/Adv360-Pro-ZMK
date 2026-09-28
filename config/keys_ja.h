@@ -24,17 +24,3 @@
 #define JA_EQUAL         &kp LS(MINUS)   // =  (JIS: Shift + -)
 #define JA_PLUS          &kp LS(SEMI)    // +  (JIS: Shift + ;)
 #define JA_ASTERISK      &kp LS(SQT)     // *  (JIS: Shift + ')
-
-// 通常は「2」、Shift時は JISの「@」の位置（LBKT = USの [ キー）を送る
-/ {
-    behaviors {
-        ja_n2: ja_number_2 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N2>, <&kp LBKT>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    };
-};
-
-#define JA_N2 &ja_n2
