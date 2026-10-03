@@ -58,32 +58,11 @@
             label = "MACRO_IME_OFF";
         };
 
-        macro_LeftSquareBracket: macro_LeftSquareBracket {
+        macro_SANTEN: macro_SANTEN {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LBKT>;
-            label = "MACRO_LEFTSQUAREBRACKET";
-        };
-
-        macro_RightSquareBrackt: macro_RightSquareBrackt {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RBKT>;
-            label = "MACRO_RIGHTSQUAREBRACKT";
-        };
-
-        macro_LeftBraces: macro_LeftBraces {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LBRC>;
-            label = "MACRO_LEFTBRACES";
-        };
-
-        macro_RightBraces: macro_RightBraces {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RBRC>;
-            label = "MACRO_RIGHTBRACES";
+            bindings = <&kp FSLH &kp FSLH &kp FSLH>;
+            label = "MACRO_SANTEN";
         };
     };
 
@@ -137,11 +116,11 @@
         Japanese {
             display-name = "Red";
             bindings = <
-&kp ESC           &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                                             &mo 3    &kp N6            &kp N7      &kp N8     &kp N9      &kp N0     &kp MINUS
-&kp TAB           &kp P      &kp R     &kp N     &kp M      &kp F   &to 0                                                                              &none    &kp SINGLE_QUOTE  &macro_ltu  &kp I      &kp E       &kp L      &kp APOS
-&kp LEFT_CONTROL  &kp H      &kp T     &kp S     &kp K      &kp W   &macro_ime_off  &kp EQUAL  &kp LALT           &kp LGUI       &kp NON_US_BACKSLASH  &kp F18  &kp MINUS         &kp A       &kp U      &kp O       &kp Y      &kp RIGHT_CONTROL
-&kp LSHFT         &kp B      &kp D     &kp Z     &kp G      &kp V                              &kp DELETE         &kp DELETE                                    &kp SEMICOLON     &macro_nn   &kp COMMA  &kp PERIOD  &kp SLASH  &kp RSHFT
-&mo 6             &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &mo 5           &kp SPACE  &kp BACKSPACE      &kp BACKSPACE  &kp ENTER             &mo 5                      &kp UP      &kp DOWN   &kp LBKT    &kp RBKT   &mo 6
+&kp ESC           &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                                             &mo 3    &kp N6         &kp N7      &kp N8     &kp N9      &kp N0     &kp MINUS
+&kp TAB           &kp P      &kp R     &kp N     &kp M      &kp F   &to 0                                                                              &none    &macro_SANTEN  &macro_ltu  &kp I      &kp E       &kp L      &kp APOS
+&kp LEFT_CONTROL  &kp H      &kp T     &kp S     &kp K      &kp W   &macro_ime_off  &kp EQUAL  &kp LALT           &kp LGUI       &kp NON_US_BACKSLASH  &kp F18  &kp MINUS      &kp A       &kp U      &kp O       &kp Y      &kp RIGHT_CONTROL
+&kp LSHFT         &kp B      &kp D     &kp Z     &kp G      &kp V                              &kp DELETE         &kp DELETE                                    &kp SEMICOLON  &macro_nn   &kp COMMA  &kp PERIOD  &kp SLASH  &kp RSHFT
+&mo 6             &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &mo 5           &kp SPACE  &kp BACKSPACE      &kp BACKSPACE  &kp ENTER             &mo 5                   &kp UP      &kp DOWN   &kp LBKT    &kp RBKT   &mo 6
             >;
         };
 
